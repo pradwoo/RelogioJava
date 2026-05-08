@@ -39,15 +39,13 @@ public class Relogio {
         if (segundos == 60) {
             segundos = 0;
             minutos++;
-        }
-
-        if (minutos == 60) {
-            minutos = 0;
-            horas++;
-        }
-
-        if (horas == 24) {
-            horas = 0;
+            if (minutos == 60) {
+                minutos = 0;
+                horas++;
+                if (horas == 24) {
+                    horas = 0;
+                }
+            }
         }
     }
 
