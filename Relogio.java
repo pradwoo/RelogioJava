@@ -1,10 +1,10 @@
 
-public class RelogiodPOO {
+public class Relogio {
     private int horas;
     private int minutos;
     private int segundos;
 
-    public RelogiodPOO(int horas, int minutos, int segundos) {
+    public Relogio(int horas, int minutos, int segundos) {
         this.horas = horas;
         this.minutos = minutos;
         this.segundos = segundos;
@@ -52,7 +52,16 @@ public class RelogiodPOO {
         this.segundos = 0;
     
     }
-    public void mostraHorario() {
-        System.out.printf("%02d:%02d:%02d\n", horas, minutos, segundos);
- }
+   
+    public String getHorarioFormatado() {
+    return String.format("%02d:%02d:%02d", horas, minutos, segundos);
 }
+    
+    public void mostraHorario() {
+    System.out.println(getHorarioFormatado());
+    
+}
+ }
+
+
+
